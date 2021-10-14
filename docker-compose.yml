@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  asir2a_git:
+    image: internetsystemsconsortium/bind9:9.16
+    ports:
+    - "5353:53"
+    volumes:
+    - etc:/etc/bind
+    - cache:/var/cache/bind
+    - lib:/var/lib/bind
+    - log:/var/log
+volumes:
+  etc: 
+  cache:
+  lib:
+  log:
